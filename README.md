@@ -1,4 +1,4 @@
-# CollegeMatch
+# CollegeMatch<sup>TM</sup>
 Mobile Application for Prospective College Students.
 
 #To view the google document of this project please click on the link below:
