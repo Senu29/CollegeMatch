@@ -31,31 +31,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSq-Lw-Kt4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="1675"/>
+            <point key="canvasLocation" x="2105.7971014492755" y="1674.7767857142856"/>
         </scene>
         <!--UserProflieViewController-->
         <scene sceneID="45I-28-Tbw">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTr-wa-9Xm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="UserProflieViewController" id="V3H-Hv-U2W" customClass="UserProfileViewController" customModule="CollegeMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xxb-eg-Plr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jd-S0-f0R">
+                                <rect key="frame" x="0.0" y="35" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="dID-2t-s9i"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WeD-mc-s2H">
+                                <rect key="frame" x="0.0" y="79" width="414" height="817"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Qb2-y3-LCx"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="aPB-II-RwV">
-                        <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color systemColor="systemGreenColor"/>
-                                <color red="0.1400736809" green="0.51395896050000001" blue="0.35200403549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color red="0.21286670269999999" green="0.94065078290000004" blue="0.40228536599999998" alpha="0.87280761299999998" colorSpace="custom" customColorSpace="sRGB"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="A6b-HF-aEG">
+                        <barButtonItem key="leftBarButtonItem" title="UserActive" id="Kdd-OX-wdo">
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="rectangle.portrait.and.arrow.right" catalog="system" id="TGd-pY-Zc3">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="V3H-Hv-U2W" id="7OB-uS-Y6d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="logoutBarButton" destination="TGd-pY-Zc3" id="Thw-MF-9sd"/>
+                        <outlet property="userBarButton" destination="Kdd-OX-wdo" id="T1V-Mj-lNs"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mTr-wa-9Xm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="1675"/>
+            <point key="canvasLocation" x="134.78260869565219" y="2462.9464285714284"/>
         </scene>
         <!--CollegeFeedViewController-->
         <scene sceneID="0wV-cg-fFM">
@@ -84,7 +103,7 @@
         <!--LoginViewController-->
         <scene sceneID="gcn-US-WRn">
             <objects>
-                <viewController title="LoginViewController" id="fdq-WJ-Gdz" customClass="LoginViewController" customModule="CollegeMatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" id="fdq-WJ-Gdz" customClass="LoginViewController" customModule="CollegeMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xDy-9k-pSm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,7 +262,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="v3N-Vm-k8c" kind="relationship" relationship="viewControllers" id="k8j-1D-Ib0"/>
-                        <segue destination="V3H-Hv-U2W" kind="relationship" relationship="viewControllers" id="rPz-pG-O96"/>
+                        <segue destination="cBk-Wf-fPB" kind="relationship" relationship="viewControllers" id="rPz-pG-O96"/>
                         <segue destination="okE-gL-lOw" kind="relationship" relationship="viewControllers" id="fpO-GV-LXk"/>
                     </connections>
                 </tabBarController>
@@ -251,11 +270,42 @@
             </objects>
             <point key="canvasLocation" x="136" y="842"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="irV-Tf-7qo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cBk-Wf-fPB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="aPB-II-RwV">
+                        <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemGreenColor"/>
+                                <color red="0.1400736809" green="0.51395896050000001" blue="0.35200403549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color red="0.21286670269999999" green="0.94065078290000004" blue="0.40228536599999998" alpha="0.87280761299999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Pj-A0-YCr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.4184350858" green="0.80002169300000003" blue="0.51845058129999999" alpha="0.87280761299999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V3H-Hv-U2W" kind="relationship" relationship="rootViewController" id="pmW-Xp-MpZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7d3-m0-OTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="1674.7767857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="atom" catalog="system" width="119" height="128"/>
         <image name="network" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
