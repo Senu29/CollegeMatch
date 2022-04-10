@@ -16,6 +16,10 @@
 		515A8BE127FA8CA500C8EC28 /* CollegeMatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A8BE027FA8CA500C8EC28 /* CollegeMatchTests.swift */; };
 		515A8BEB27FA8CA500C8EC28 /* CollegeMatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A8BEA27FA8CA500C8EC28 /* CollegeMatchUITests.swift */; };
 		515A8BED27FA8CA500C8EC28 /* CollegeMatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515A8BEC27FA8CA500C8EC28 /* CollegeMatchUITestsLaunchTests.swift */; };
+		516C466E2802A74B00C7F94A /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516C466D2802A74B00C7F94A /* UserProfileViewController.swift */; };
+		516C46702802A92400C7F94A /* PredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516C466F2802A92400C7F94A /* PredictionViewController.swift */; };
+		51A397DD280243DB0010FADB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A397DC280243DB0010FADB /* LoginViewController.swift */; };
+		51A397DF28026EE10010FADB /* CollegeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A397DE28026EE10010FADB /* CollegeFeedViewController.swift */; };
 		B5D606DA73E22C111F05D449 /* Pods_CollegeMatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDAC76A57D4CF6EC38EA30F /* Pods_CollegeMatchTests.framework */; };
 		D582106266E3302AAB1874D7 /* Pods_CollegeMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B691C4C1E14D500F351867 /* Pods_CollegeMatch.framework */; };
 		F3C11DDA0614B32F2A7B6BB5 /* Pods_CollegeMatch_CollegeMatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55450A39C60D3796DA3F8D0E /* Pods_CollegeMatch_CollegeMatchUITests.framework */; };
@@ -55,6 +59,10 @@
 		515A8BE627FA8CA500C8EC28 /* CollegeMatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeMatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		515A8BEA27FA8CA500C8EC28 /* CollegeMatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeMatchUITests.swift; sourceTree = "<group>"; };
 		515A8BEC27FA8CA500C8EC28 /* CollegeMatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeMatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		516C466D2802A74B00C7F94A /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		516C466F2802A92400C7F94A /* PredictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionViewController.swift; sourceTree = "<group>"; };
+		51A397DC280243DB0010FADB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		51A397DE28026EE10010FADB /* CollegeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeFeedViewController.swift; sourceTree = "<group>"; };
 		55450A39C60D3796DA3F8D0E /* Pods_CollegeMatch_CollegeMatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollegeMatch_CollegeMatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D60ABA2D387482CCD484AA /* Pods-CollegeMatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollegeMatch.release.xcconfig"; path = "Target Support Files/Pods-CollegeMatch/Pods-CollegeMatch.release.xcconfig"; sourceTree = "<group>"; };
 		6C7A4680A6D41098E2CB5E06 /* Pods-CollegeMatch-CollegeMatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollegeMatch-CollegeMatchUITests.debug.xcconfig"; path = "Target Support Files/Pods-CollegeMatch-CollegeMatchUITests/Pods-CollegeMatch-CollegeMatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +109,6 @@
 				23897FB6F36A93A963FC71F8 /* Pods-CollegeMatchTests.debug.xcconfig */,
 				F623AEEB0BFBB4C1604B2B15 /* Pods-CollegeMatchTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -109,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				515A8BC827FA8CA000C8EC28 /* CollegeMatch */,
+				51A397DB2802436B0010FADB /* ViewControllers */,
 				515A8BDF27FA8CA500C8EC28 /* CollegeMatchTests */,
 				515A8BE927FA8CA500C8EC28 /* CollegeMatchUITests */,
 				515A8BC727FA8CA000C8EC28 /* Products */,
@@ -156,6 +164,17 @@
 				515A8BEC27FA8CA500C8EC28 /* CollegeMatchUITestsLaunchTests.swift */,
 			);
 			path = CollegeMatchUITests;
+			sourceTree = "<group>";
+		};
+		51A397DB2802436B0010FADB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				51A397DC280243DB0010FADB /* LoginViewController.swift */,
+				516C466D2802A74B00C7F94A /* UserProfileViewController.swift */,
+				51A397DE28026EE10010FADB /* CollegeFeedViewController.swift */,
+				516C466F2802A92400C7F94A /* PredictionViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C984D5579D7A6C4712FE2AC6 /* Frameworks */ = {
@@ -407,8 +426,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51A397DD280243DB0010FADB /* LoginViewController.swift in Sources */,
+				516C466E2802A74B00C7F94A /* UserProfileViewController.swift in Sources */,
 				515A8BCE27FA8CA000C8EC28 /* ViewController.swift in Sources */,
 				515A8BCA27FA8CA000C8EC28 /* AppDelegate.swift in Sources */,
+				516C46702802A92400C7F94A /* PredictionViewController.swift in Sources */,
+				51A397DF28026EE10010FADB /* CollegeFeedViewController.swift in Sources */,
 				515A8BCC27FA8CA000C8EC28 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
